@@ -1,0 +1,16 @@
+# --- Dependências (Backend e Frontend) ---
+node_modules/
+
+# --- Build do Next.js (Frontend) ---
+.next/
+out/
+build/
+
+# --- Variáveis de Ambiente (Segurança) ---
+.env
+
+# --- Arquivos de Sistema do Mac (Já que você usa Mac) ---
+.DS_Store
+
+# --- Logs de Erro (Caso ocorram) ---
+npm-debug.log*
