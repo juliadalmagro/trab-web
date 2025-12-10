@@ -1,0 +1,60 @@
+Relatório do Projeto – LocaFilm
+
+Aluna: Julia Grando
+Disciplina: Desenvolvimento Web
+
+1. O que é o Projeto
+O LocaFilm é uma aplicação web criada em Next.js para aluguel de filmes. Neste commit, o foco foi implementar três partes importantes do sistema: a página de cadastro, o catálogo de filmes e a área “Meus Aluguéis”. Cada uma dessas telas utiliza serviços da API e compõe o fluxo principal do usuário dentro da plataforma.
+A ideia geral é permitir que uma pessoa crie sua conta, navegue pelo catálogo, alugue filmes e gerencie seus próprios alugueis. Usuários administradores também podem cadastrar, editar e excluir filmes diretamente pelo catálogo.
+
+2. Como o código foi organizado
+
+• cadastro.js — Página de cadastro
+É responsável por criar novos usuários no sistema.
+Inclui:
+campos de nome, email e senha
+envio dos dados para a rota /auth/register
+exibição de erros
+redirecionamento para o login
+interface com fundo e estilo inspirado na Netflix
+Baseado em React Hooks e TailwindCSS.
+cadastro
+
+• catalogo.js — Catálogo completo
+É a página mais complexa do commit.
+Ela contém:
+listagem de filmes vinda da API /movies
+modal de detalhes
+botão de aluguel para usuários comuns
+verificação do papel do usuário (admin ou cliente)
+botões de editar, excluir e adicionar filmes (somente admin)
+atualização automática após cada ação
+catalogo
+
+• meus-alugueis.js — Área pessoal do usuário
+Mostra todos os filmes alugados pelo usuário logado.
+Inclui:
+capa, título, sinopse e data do aluguel
+botão para devolver filmes
+remoção imediata do item ao devolver
+verificação de login
+meus-alugueis
+
+3. O que o sistema faz (com base no commit)
+Com o que foi implementado, o sistema agora possui:
+Cadastro funcional com validação simples e feedback visual
+Catálogo completo, capaz de exibir, alugar e gerenciar filmes
+Painel de alugueis, onde o usuário devolve filmes
+Controle de permissões, exibindo funções de admin somente para quem tem acesso
+Integração total com a API, incluindo GET, POST, PUT e DELETE
+Layout responsivo com Tailwind
+
+4. Dificuldades que tive
+Controle de permissões entre usuário comum e admin dentro do catálogo
+Manter a lista atualizada após criar, editar, excluir ou alugar filmes
+Organizar o comportamento dos modais e formulários
+Ajustar efeitos visuais (opacidade, sombras e transições) no tema escuro
+Garantir redirecionamentos corretos quando o usuário não está logado
+
+5. Conclusão
+O commit criou partes fundamentais do LocaFilm, permitindo que o usuário se cadastre, visualize o catálogo e gerencie seus alugueis. Também estabeleceu toda a estrutura de administração de filmes. Essa base deixa o sistema pronto para evoluir para novas telas e integrações.
