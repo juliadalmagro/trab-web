@@ -1,0 +1,70 @@
+Relatório do Projeto – WebMovie
+
+Aluno: Laura Silva
+Disciplina: Desenvolvimento Web
+
+1. O que é o Projeto
+O projeto WebMovie é uma aplicação web desenvolvida com Next.js, contendo a estrutura inicial do site e a implementação da pagina de login. O foco do commit realizado foi organizar a base do projeto, configurar os estilos globais e desenvolver a tela de autenticação do usuário com layout moderno e responsivo.
+
+2. Como o codigo foi organizado
+• _app.js — Configuração global
+Este arquivo define como todas as páginas do Next.js são carregadas.
+Ele importa o arquivo de estilos globais e renderiza os componentes de cada página.
+Arquivo: 
+_app
+Isso garante consistência visual em toda a aplicação.
+
+• index.js — Página inicial
+Atualmente, o arquivo apenas importa e exporta another página (catalogo), servindo como ponto de entrada da aplicação.
+Arquivo: 
+index
+• login.js — Página de Login
+
+Foi o arquivo mais trabalhado no commit.
+Ele contem:
+campos de email e senha
+validação simples
+envio dos dados para a API (via api.post)
+armazenamento do usuário no localStorage
+redirecionamento para o catálogo
+mensagens de erro
+layout estilo Netflix com imagem de fundo e efeitos visuais modernos
+
+Arquivo: 
+login
+Essa página utiliza:
+React Hooks (useState, useRouter)
+TailwindCSS para estilização
+Componente Navbar
+Rotas Next.js
+
+3. O que o sistema faz (com base no commit)
+
+Com os arquivos enviados, o sistema possui:
+ Tela de Login funcional (front-end)
+Captura email e senha
+Envia solicitação para a API
+Mostra mensagem caso o login falhe
+Salva o usuário no navegador
+Redireciona após o login
+ Arquitetura inicial do projeto em Next.js
+Configuração global
+Roteamento automático
+Estilos aplicados com TailwindCSS
+ Preparação para a expansão do sistema
+
+4. Dificuldades que tive
+As principais dificuldades relacionadas ao commit foram:
+
+• Integração do login com a API
+O envio de dados e o tratamento de erro precisam funcionar corretamente.
+Houve ajustes na lógica do botão e na forma de capturar a resposta da API.
+• Organização do Next.js
+Por ser uma arquitetura baseada em arquivos, exigiu atenção para manter pastas e imports corretos.
+• Estilização com Tailwind
+Algumas animações e opacidades precisaram ser ajustadas para ficarem visíveis com o fundo escuro.
+
+5. Conclusão;
+O commit realizado estabeleceu a estrutura base do projeto e implementou a página de login com layout moderno e funcional. Essa etapa foi essencial para preparar o sistema para futuras páginas como catálogo, cadastro e painel do usuário.
+
+O projeto agora possui a fundação necessária para ser expandido de forma organizada e profissional.
