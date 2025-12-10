@@ -1,0 +1,36 @@
+Relatório do Projeto - LocaFilm
+
+Aluno: Júlia Dalmagro
+Disciplina: Desenvolvimento Web
+1. O que é o Projeto
+
+Desenvolvemos o LocaFilm, um site de locadora de filmes. A ideia é simular um sistema real onde o usuário entra, vê os filmes disponíveis, aluga e depois devolve. Também fiz uma área para o administrador conseguir cadastrar e excluir filmes.
+
+2. Como eu organizei o código (Backend)
+
+Para não deixar o código bagunçado, usei a estrutura CSR que foi pedida:
+
+    Controller: É a "porta de entrada". Ele recebe o que o site manda (o pedido do usuário) e devolve a resposta.
+
+    Service: É onde ficam as regras. Por exemplo, conferir se a senha está certa ou se o filme está disponível.
+
+    Repository: É quem mexe direto no banco de dados.
+
+Usei também Middlewares para três coisas: mostrar no terminal qual rota foi acessada (log), validar se os dados vieram certos e tratar erros para o sistema não cair.
+
+3. O que o sistema faz
+
+    Login e Cadastro: Tem diferença entre Admin (pode tudo) e Cliente (só aluga).
+
+    Banco de Dados: Usei o PostgreSQL rodando no Docker para salvar tudo.
+
+Locação: Quando alguém aluga um filme, ele sai da lista principal para ninguém alugar duplicado.
+
+4. Dificuldades que tive
+
+A parte mais chata foi configurar o Docker. O banco de dados não queria conectar porque a porta padrão (5432) já estava em uso no meu computador. Tive que mudar a configuração para a porta 5433 para funcionar.
+
+Outra coisa que deu trabalho foi a lógica de alugar: eu precisava fazer o filme "sumir" do catálogo quando alguém alugasse. Resolvi criando um campo "alugado" no banco de dados que muda para verdadeiro ou falso.
+5. Conclusão
+
+Foi um trabalho complicado, principalmente para ligar o Frontend com o Backend e fazer o banco funcionar no Docker.
